@@ -56,8 +56,8 @@ class MainScreen: UIViewController {
         
         warpButton.addAction(UIAction { [weak self] _ in
             guard let result = self?.simulator.getRandomPrize() else {return}
-            self?.setBackgroundColour(warpResult: result)
-            
+//            self?.setBackgroundColour(warpResult: result)
+            self?.didReceiveReward(result)
         }, for: .touchUpInside)
         
     }
@@ -71,19 +71,23 @@ class MainScreen: UIViewController {
         
     }
     
-    func setBackgroundColour(warpResult: String) {
-        switch warpResult {
-        case "legendary":
-            view.backgroundColor = UIColor(red: 255/255, green: 187/255, blue: 92/255, alpha: 255/255)
-        
-        case "epic":
-            view.backgroundColor = UIColor(red: 128/255, green: 98/255, blue: 214/255, alpha: 255/255)
-        case "blue":
-            view.backgroundColor = UIColor(red: 39/255, green: 158/255, blue: 255/255, alpha: 255/255)
-        default:
-            view.backgroundColor = .white
-        }
+    func didReceiveReward(_ reward: Reward) {
+        view.backgroundColor = reward.color
     }
+    
+//    func setBackgroundColour(warpResult: String) {
+//        switch warpResult {
+//        case "legendary":
+//            view.backgroundColor = UIColor(red: 255/255, green: 187/255, blue: 92/255, alpha: 255/255)
+//
+//        case "epic":
+//            view.backgroundColor = UIColor(red: 128/255, green: 98/255, blue: 214/255, alpha: 255/255)
+//        case "blue":
+//            view.backgroundColor = UIColor(red: 39/255, green: 158/255, blue: 255/255, alpha: 255/255)
+//        default:
+//            view.backgroundColor = .white
+//        }
+//    }
     
 }
 
