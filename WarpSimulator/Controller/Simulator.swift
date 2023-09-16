@@ -12,6 +12,7 @@ class Simulator {
     
     var fiveStarCounter = 0
     var fourStarCounter = 0
+    var x10Reward: [Reward] = []
     
 //    func getRandomPrize() -> String {
 //
@@ -137,6 +138,15 @@ class Simulator {
         
         return result
         
+    }
+    
+    func getX10RandomPrize(completion: @escaping ([Reward]) -> ()) {
+        x10Reward = []
+        for _ in 1...10 {
+            x10Reward.append(getRandomPrize())
+        }
+        completion(x10Reward)
+        print(x10Reward)
     }
     
     func weightedRandom<Value>(weightedValues: (value: Value, weight: Double)...) -> Value {
