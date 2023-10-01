@@ -9,7 +9,7 @@ import UIKit
 
 class MainScreen: UIViewController {
     
-    
+    let image = UIImage.
     let backgroundImageView = UIImageView()
     let warpButton = UIButton()
     let x10WarpButton = UIButton()
@@ -60,7 +60,7 @@ class MainScreen: UIViewController {
         warpButton.configuration?.baseBackgroundColor = .white
         
         warpButton.addAction(UIAction { [weak self] _ in
-            self?.hide10Xsquares()
+            self?.remove10Xsquares()
             guard let result = self?.simulator.getRandomPrize() else {return}
 //            self?.setBackgroundColour(warpResult: result)
             self?.didReceiveReward(result)
@@ -90,7 +90,8 @@ class MainScreen: UIViewController {
         
         x10WarpButton.addAction(UIAction { [weak self] _ in
             self?.view.backgroundColor = .white
-            guard let x10result = self?.simulator.x10Reward  else {return}
+            guard (self?.simulator.x10Reward) != nil  else {return}
+            self?.remove10Xsquares()
             self?.simulator.getX10RandomPrize(completion: { x10result in
                 self?.drowX10squares(rewards: x10result)
             })
@@ -143,9 +144,9 @@ class MainScreen: UIViewController {
         
     }
     
-    func hide10Xsquares() {
+    func remove10Xsquares() {
         for name in squareNames {
-            name.isHidden = true
+            name.removeFromSuperlayer()
         }
         squareNames = []
     }
