@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C713E9642AB0788600F020F6 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713E9632AB0788600F020F6 /* Reward.swift */; };
+		F272609D2ACDCCA400EE8E88 /* 5 star heroes and cones.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F272609C2ACDCCA400EE8E88 /* 5 star heroes and cones.xcassets */; };
+		F272609F2ACDCCBC00EE8E88 /* 4 star heroes and cones.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F272609E2ACDCCBC00EE8E88 /* 4 star heroes and cones.xcassets */; };
+		F27260A12ACDCCD200EE8E88 /* 3 star cones.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F27260A02ACDCCD200EE8E88 /* 3 star cones.xcassets */; };
 		F2829A4B2AA75EA9003F3828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2829A4A2AA75EA9003F3828 /* AppDelegate.swift */; };
 		F2829A4D2AA75EA9003F3828 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2829A4C2AA75EA9003F3828 /* SceneDelegate.swift */; };
 		F2829A4F2AA75EA9003F3828 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2829A4E2AA75EA9003F3828 /* MainScreen.swift */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		C713E9632AB0788600F020F6 /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
+		F272609C2ACDCCA400EE8E88 /* 5 star heroes and cones.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "5 star heroes and cones.xcassets"; sourceTree = "<group>"; };
+		F272609E2ACDCCBC00EE8E88 /* 4 star heroes and cones.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "4 star heroes and cones.xcassets"; sourceTree = "<group>"; };
+		F27260A02ACDCCD200EE8E88 /* 3 star cones.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "3 star cones.xcassets"; sourceTree = "<group>"; };
 		F2829A472AA75EA9003F3828 /* WarpSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarpSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2829A4A2AA75EA9003F3828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2829A4C2AA75EA9003F3828 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +59,9 @@
 				F2829A4A2AA75EA9003F3828 /* AppDelegate.swift */,
 				F2829A4C2AA75EA9003F3828 /* SceneDelegate.swift */,
 				F2829A532AA75EAE003F3828 /* Assets.xcassets */,
+				F27260A02ACDCCD200EE8E88 /* 3 star cones.xcassets */,
+				F272609E2ACDCCBC00EE8E88 /* 4 star heroes and cones.xcassets */,
+				F272609C2ACDCCA400EE8E88 /* 5 star heroes and cones.xcassets */,
 				F2829A552AA75EAE003F3828 /* LaunchScreen.storyboard */,
 			);
 			path = "Support Files";
@@ -122,7 +131,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					F2829A462AA75EA9003F3828 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -154,6 +163,9 @@
 			files = (
 				F2829A572AA75EAE003F3828 /* LaunchScreen.storyboard in Resources */,
 				F2829A542AA75EAE003F3828 /* Assets.xcassets in Resources */,
+				F272609F2ACDCCBC00EE8E88 /* 4 star heroes and cones.xcassets in Resources */,
+				F272609D2ACDCCA400EE8E88 /* 5 star heroes and cones.xcassets in Resources */,
+				F27260A12ACDCCD200EE8E88 /* 3 star cones.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +202,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -222,6 +235,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -250,6 +264,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -282,6 +297,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

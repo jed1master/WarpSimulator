@@ -62,6 +62,7 @@ class Simulator {
 //
 //    }
     
+    
     var warps: Int = 0
     
     private var legendaries: Int = 0
