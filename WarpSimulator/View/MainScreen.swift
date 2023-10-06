@@ -135,8 +135,13 @@ class MainScreen: UIViewController {
         
         closeButton.isHidden = true
         closeButton.configuration = .plain()
-        closeButton.configuration?.image = UIImage(resource: .close)
-        closeButton.configuration?.contentInsets = .zero
+//        closeButton.configuration?.buttonSize = .small
+//        closeButton.configuration?.image = UIImage(resource: .close)
+//        closeButton.configuration?.contentInsets = .zero
+        let image = UIImage(systemName: "xmark")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        closeButton.configuration?.image = image
+       
+        
         
         closeButton.addAction(UIAction { [weak self] _ in
             self?.resultImageView.isHidden = true
@@ -147,10 +152,10 @@ class MainScreen: UIViewController {
     func setCloseButtonConstraints() {
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         
-        closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        closeButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        closeButton.widthAnchor.constraint(equalToConstant: 30).isActive = true
-        closeButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 25).isActive = true
+        closeButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 25).isActive = true
+        closeButton.widthAnchor.constraint(equalToConstant: 15).isActive = true
+        closeButton.heightAnchor.constraint(equalToConstant: 15).isActive = true
 //        closeButton.leadingAnchor.constraint(equalTo: closeButton.trailingAnchor, constant: -10).isActive = true
 //        closeButton.bottomAnchor.constraint(equalTo: closeButton.topAnchor, constant: 20).isActive = true
         
