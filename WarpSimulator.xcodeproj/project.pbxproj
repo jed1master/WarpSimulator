@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C713E9642AB0788600F020F6 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713E9632AB0788600F020F6 /* Reward.swift */; };
-		F272609D2ACDCCA400EE8E88 /* 5 star heroes and cones.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F272609C2ACDCCA400EE8E88 /* 5 star heroes and cones.xcassets */; };
-		F272609F2ACDCCBC00EE8E88 /* 4 star heroes and cones.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F272609E2ACDCCBC00EE8E88 /* 4 star heroes and cones.xcassets */; };
+		F20511782AD4751900B283DF /* 4 star heroes.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20511772AD4751900B283DF /* 4 star heroes.xcassets */; };
+		F205117A2AD4755E00B283DF /* 4 star cones.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20511792AD4755E00B283DF /* 4 star cones.xcassets */; };
+		F205117C2AD4786600B283DF /* 5 star heroes.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F205117B2AD4786600B283DF /* 5 star heroes.xcassets */; };
+		F205117E2AD4788E00B283DF /* 5 star cones.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F205117D2AD4788E00B283DF /* 5 star cones.xcassets */; };
 		F27260A12ACDCCD200EE8E88 /* 3 star cones.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F27260A02ACDCCD200EE8E88 /* 3 star cones.xcassets */; };
 		F2829A4B2AA75EA9003F3828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2829A4A2AA75EA9003F3828 /* AppDelegate.swift */; };
 		F2829A4D2AA75EA9003F3828 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2829A4C2AA75EA9003F3828 /* SceneDelegate.swift */; };
@@ -21,8 +23,10 @@
 
 /* Begin PBXFileReference section */
 		C713E9632AB0788600F020F6 /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
-		F272609C2ACDCCA400EE8E88 /* 5 star heroes and cones.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "5 star heroes and cones.xcassets"; sourceTree = "<group>"; };
-		F272609E2ACDCCBC00EE8E88 /* 4 star heroes and cones.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "4 star heroes and cones.xcassets"; sourceTree = "<group>"; };
+		F20511772AD4751900B283DF /* 4 star heroes.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "4 star heroes.xcassets"; sourceTree = "<group>"; };
+		F20511792AD4755E00B283DF /* 4 star cones.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "4 star cones.xcassets"; sourceTree = "<group>"; };
+		F205117B2AD4786600B283DF /* 5 star heroes.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "5 star heroes.xcassets"; sourceTree = "<group>"; };
+		F205117D2AD4788E00B283DF /* 5 star cones.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "5 star cones.xcassets"; sourceTree = "<group>"; };
 		F27260A02ACDCCD200EE8E88 /* 3 star cones.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "3 star cones.xcassets"; sourceTree = "<group>"; };
 		F2829A472AA75EA9003F3828 /* WarpSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarpSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2829A4A2AA75EA9003F3828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,9 +63,11 @@
 				F2829A4A2AA75EA9003F3828 /* AppDelegate.swift */,
 				F2829A4C2AA75EA9003F3828 /* SceneDelegate.swift */,
 				F2829A532AA75EAE003F3828 /* Assets.xcassets */,
+				F205117B2AD4786600B283DF /* 5 star heroes.xcassets */,
+				F205117D2AD4788E00B283DF /* 5 star cones.xcassets */,
+				F20511792AD4755E00B283DF /* 4 star cones.xcassets */,
+				F20511772AD4751900B283DF /* 4 star heroes.xcassets */,
 				F27260A02ACDCCD200EE8E88 /* 3 star cones.xcassets */,
-				F272609E2ACDCCBC00EE8E88 /* 4 star heroes and cones.xcassets */,
-				F272609C2ACDCCA400EE8E88 /* 5 star heroes and cones.xcassets */,
 				F2829A552AA75EAE003F3828 /* LaunchScreen.storyboard */,
 			);
 			path = "Support Files";
@@ -162,9 +168,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2829A572AA75EAE003F3828 /* LaunchScreen.storyboard in Resources */,
+				F205117C2AD4786600B283DF /* 5 star heroes.xcassets in Resources */,
+				F20511782AD4751900B283DF /* 4 star heroes.xcassets in Resources */,
 				F2829A542AA75EAE003F3828 /* Assets.xcassets in Resources */,
-				F272609F2ACDCCBC00EE8E88 /* 4 star heroes and cones.xcassets in Resources */,
-				F272609D2ACDCCA400EE8E88 /* 5 star heroes and cones.xcassets in Resources */,
+				F205117E2AD4788E00B283DF /* 5 star cones.xcassets in Resources */,
+				F205117A2AD4755E00B283DF /* 4 star cones.xcassets in Resources */,
 				F27260A12ACDCCD200EE8E88 /* 3 star cones.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,8 +18,10 @@ class MainScreen: UIViewController {
     var square = CAShapeLayer()
     var squareNames: [CAShapeLayer] = []
     var commonPictures: [String] = []
-    var epicPictures: [String] = []
-    var legendaryPictures: [String] = []
+    var epicHeroPictures: [String] = []
+    var epicConePictures: [String] = []
+    var legendaryHeroPictures: [String] = []
+    var legendaryConePictures: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +59,6 @@ class MainScreen: UIViewController {
         view.addSubview(resultImageView)
         
         resultImageView.isHidden = true
-        resultImageView.contentMode = .scaleAspectFit
 //        backgroundImageView.bringSubviewToFront(resultImageView)
     }
     
@@ -214,22 +215,40 @@ class MainScreen: UIViewController {
     }
     func getPicturesFromAssets() {
         
-        getLegendaryPictures()
-        getEpicPictures()
+        getLegendaryHeroPictures()
+        getLegendaryConePictures()
+        getEpicHeroPictures()
+        getEpicConePictures()
         getCommonPictures()
         
-        func getLegendaryPictures() {
+        func getLegendaryHeroPictures() {
             var count = 1
-            for _ in 0...13 {
-                legendaryPictures.append("5star" + "\(count)")
+            for _ in 0...6 {
+                legendaryHeroPictures.append("5sHero" + "\(count)")
                 count += 1
             }
         }
         
-        func getEpicPictures() {
+        func getLegendaryConePictures() {
             var count = 1
-            for _ in 0...49 {
-                epicPictures.append("4star" + "\(count)")
+            for _ in 0...6 {
+                legendaryConePictures.append("5sCone" + "\(count)")
+                count += 1
+            }
+        }
+        
+        func getEpicHeroPictures() {
+            var count = 1
+            for _ in 0...13 {
+                epicHeroPictures.append("4sHero" + "\(count)")
+                count += 1
+            }
+        }
+        
+        func getEpicConePictures() {
+            var count = 1
+            for _ in 0...35 {
+                epicConePictures.append("4sCone" + "\(count)")
                 count += 1
             }
         }
@@ -248,17 +267,37 @@ class MainScreen: UIViewController {
         switch reward.title {
             
         case "Legendary" :
-            let randomNumber = Int.random(in: 0...13)
-            resultImageView.image = UIImage(named: legendaryPictures[randomNumber])
-            resultImageView.isHidden = false
+            let heroOrConeNumber = Int.random(in: 0...1)
+            if heroOrConeNumber == 0 {
+                let randomNumber = Int.random(in: 0...6)
+                resultImageView.contentMode = .scaleAspectFit
+                resultImageView.image = UIImage(named: legendaryConePictures[randomNumber])
+                resultImageView.isHidden = false
+            } else {
+                let randomNumber = Int.random(in: 0...6)
+                resultImageView.contentMode = .scaleAspectFill
+                resultImageView.image = UIImage(named: legendaryHeroPictures[randomNumber])
+                resultImageView.isHidden = false
+            }
+            
             
         case "Epic" :
-            let randomNumber = Int.random(in: 0...49)
-            resultImageView.image = UIImage(named: epicPictures[randomNumber])
-            resultImageView.isHidden = false
+            let heroOrConeNumber = Int.random(in: 0...1)
+            if heroOrConeNumber == 0 {
+                let randomNumber = Int.random(in: 0...35)
+                resultImageView.contentMode = .scaleAspectFit
+                resultImageView.image = UIImage(named: epicConePictures[randomNumber])
+                resultImageView.isHidden = false
+            } else {
+                let randomNumber = Int.random(in: 0...13)
+                resultImageView.contentMode = .scaleAspectFill
+                resultImageView.image = UIImage(named: epicHeroPictures[randomNumber])
+                resultImageView.isHidden = false
+            }
             
         case "Common" :
             let randomNumber = Int.random(in: 0...20)
+            resultImageView.contentMode = .scaleAspectFit
             resultImageView.image = UIImage(named: commonPictures[randomNumber])
             resultImageView.isHidden = false
        
