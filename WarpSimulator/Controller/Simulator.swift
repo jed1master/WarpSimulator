@@ -147,7 +147,6 @@ class Simulator {
             x10Reward.append(getRandomPrize())
         }
         completion(x10Reward)
-        print(x10Reward)
     }
     
     func weightedRandom<Value>(weightedValues: (value: Value, weight: Double)...) -> Value {
